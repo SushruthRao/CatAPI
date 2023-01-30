@@ -1,0 +1,166 @@
+html { overflow-y: hidden; }
+
+:root {
+    --c1: #871ae0;
+    --c2: #521ae0;
+}
+img{
+    max-height: 350px;
+    max-width: 350px;
+    
+}
+#cat-div{
+    display: flex;
+    place-content: center;
+    
+    
+    
+}
+
+@keyframes bground-anim {
+    0% {
+        background-position: 0% 0%
+    }
+
+    50% {
+        background-position: 57% 100%
+    }
+
+    100% {
+        background-position: 0% 0%
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+#bg {
+    animation: bground-anim 5s linear infinite;
+    background: linear-gradient(281deg, #871ae0, #521ae0);
+    background-size: 400% 400%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: -3000;
+    height: 100vh;
+    width: 100vw;
+
+
+}
+
+#emoji-bg > div {
+    position: absolute;
+    list-style: none;
+    bottom: -100px;
+    font-size: 3rem;
+    left: 5%;
+    animation: spin 4s linear infinite;
+
+}
+
+#emoji-bg :nth-child(1) {
+    left: 10%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+#emoji-bg :nth-child(2) {
+    left: 22%;
+    animation-duration: 4s;
+    animation-delay: 2s;
+}
+
+#emoji-bg :nth-child(3) {
+    left: 37%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+#emoji-bg :nth-child(4) {
+    left: 90%;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+#emoji-bg :nth-child(5) {
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+#emoji-bg :nth-child(6) {
+    left: 65%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+img{
+    border-radius: 20%;
+    border-color: #ffffff;
+    border: 10px solid;
+    width:100%;
+    transition: border-color 0.7s ease, box-shadow 0.7s ease, color 0.7s ease;
+}
+img:hover{
+    border-color: #ffffff;
+    
+  box-shadow: 0 20px 35px rgba(255, 255, 255, 0.4);
+}
+
+#control-box{
+    display:grid;
+    height:40%;
+    overflow:visible;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    
+}
+#control-box > div{
+   height:30vh
+}
+#Main  {
+    display: flex;
+    place-content: center;
+    background-color: rgb(23, 17, 17);
+    color:white;
+    height:10vh;
+    width:14vw;
+    position: absolute;
+    right:43%;
+    top:10%;
+    text-align: center;
+    padding-top: 100px;
+    border-radius: 100%;
+    font-size: 5rem;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+#Main > div{
+    position: relative;
+    top:-70%;
+    
+}
+
+#Main:hover{
+    background-color: #afa2b3;
+    color: rgba(255, 255, 255, 1);
+  box-shadow: 0 20px 35px rgba(255, 255, 255, 0.4);
+}
+@keyframes hoveranim {
+    100%{
+        background-color: #2e0839;
+    }
+    
+}
+#cat-div{
+    display: flex;
+    position: absolute;
+    transition: background-color 0.6s ease;
+    top:-60%;
+    place-content: center;
+    position: relative;
+}
