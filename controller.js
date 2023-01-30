@@ -21,6 +21,7 @@ function processJSON(e) {
     }
 }
 }
+getCat();
 
 
 
